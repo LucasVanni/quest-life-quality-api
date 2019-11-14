@@ -13,7 +13,7 @@ class UserController {
         "email.required": "Esse campo é obrigatório",
         "email.unique": "Esse e-mail já existe",
         "password.required": "Esse campo é obrigatório",
-        "password.min": "O password deve ter mais que 6 carácteres",
+        "password.min": "O password deve ter mais que 6 carácteres"
       };
 
       const validation = await validateAll(
@@ -21,9 +21,9 @@ class UserController {
         {
           username: "required|min:5|unique:users",
           email: "required|email|unique:users",
-          password: "required|min:6",
+          password: "required|min:6"
         },
-        erroMessage,
+        erroMessage
       );
 
       if (validation.fails()) {

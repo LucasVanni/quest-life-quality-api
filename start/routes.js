@@ -14,14 +14,13 @@
 */
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
-
 const Route = use("Route");
 
 Route.post("/user", "UserController.create");
 Route.post("/login", "UserController.login");
 
-Route.resource("patiente", "PatienteController")
+Route.resource("/patiente", "PatienteController")
   .apiOnly()
   .middleware("auth");
 
-Route.get("patiente/:id/edit", "PatienteController.edit").middleware("auth");
+Route.get("/patiente/:id/edit", "PatienteController.edit").middleware("auth");

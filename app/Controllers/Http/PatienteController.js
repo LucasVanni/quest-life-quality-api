@@ -50,7 +50,7 @@ class PatienteController {
       const patiente = await Patiente.create({
         ...data,
         pontuation: 0,
-        user_id: id,
+        user_id: id
       });
 
       return patiente;
